@@ -5,7 +5,7 @@ import pandas as pd
 # - data explanation:
 # "nps rating": Net promoter score is a market research metric that is based on a single survey question asking
 # respondents to rate the likelihood that they would recommend a company, product, or a service to a friend.
-df = pd.read_csv('./ChurnPrediction/CustomerChurn/classificationdata.csv', index_col='id')
+df = pd.read_csv('classificationdata.csv', index_col='id')
 # to show all columns
 pd.set_option('display.max_columns', None)
 print(df.head())
