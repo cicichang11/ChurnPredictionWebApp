@@ -37,6 +37,30 @@ To use the web app for customer churn prediction, follow the steps below:
 **Note:** The graph will dynamically update as you change the input features and click the "Predict" button.
 
 
+## Deployment
+
+Please note that this web app is designed as a local deployment and is not publicly accessible on the internet. To deploy and run the app locally, follow these steps:
+
+1. Download and install Visual Studio Code (VS Code) from the official website: https://code.visualstudio.com/
+
+2. Open VS Code and navigate to the project folder.
+
+3. Install the required dependencies by running the following command in the VS Code terminal: pip install -r requirements.txt
+
+4. Navigate to the `app` folder within the project directory.
+
+5. Open the `app.py` file in VS Code by running the following command in the terminal: code .
+
+6. In the VS Code terminal, run the following command to start the web app: streamlit run app.py
+
+7. The web app will launch in your default browser, and you can use it locally for predicting customer churn based on the provided features.
+
+
+## Final Web Page Demonstration
+
+![Web App Screenshot](final_web_app.png)
+
+
 Feel free to reach out for any questions or concerns.
 
 
