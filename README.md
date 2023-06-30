@@ -58,7 +58,7 @@ Please note that this web app is designed as a local deployment and is not publi
 
 ## Final Web Page Demonstration
 
-![Web App Screenshot](final_web_app.png)
+![Web App Screenshot](CustomerChurnWebScreenshot.png)
 
 
 Feel free to reach out for any questions or concerns.
