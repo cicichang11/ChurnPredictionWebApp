@@ -1,8 +1,43 @@
-# Customer Churn Prediction Web App
+# Customer Churn Prediction Web App using Streamlit
+
 
 ## Classification Model Training
 
-This repository contains the code and resources for training a classification model to predict customer churn. The model is built using various machine learning algorithms, and after evaluating their performance, the Gradient Boosting Classifier was selected due to its highest accuracy.
+This repository contains the code and resources for training a classification model to predict customer churn. The model is built using various machine learning algorithms, and after evaluating performance, a Gradient Boosting Classifier is selected as the best model.
+
+The major steps involved in training the model are:
+
+
+### Data Import and Preparation
+
+- The customer dataset is imported as a Pandas DataFrame
+- The target column 'churn' is separated from the feature columns
+- The data is split into training and test sets for modeling
+
+### Exploratory Data Analysis 
+
+- Visualizations and statistical analysis are used to understand drivers of churn
+- This includes inspecting target distribution, correlations, interactions, etc.
+
+### Feature Engineering
+
+Additional features are generated to capture insights from EDA:
+
+- Ratios of highly correlated numeric variables 
+- Log transforms of skewed features like calls
+- Indicators of dissatisfied customers
+
+### Model Training
+
+A pipeline is created with preprocessing steps like imputation and standardization
+
+- Stochastic Gradient Descent (SGD)
+- Ridge Classifier
+- Random Forest Classifier
+- Gradient Boosting Classifier (selected algorithm)
+- XGBoost Classifier
+
+The pipelines are implemented using scikit-learn's `make_pipeline` function, and each pipeline includes a standardization step using `StandardScaler()` to preprocess the data before applying the respective algorithm.
 
 ### Model Training Pipeline
 
@@ -15,6 +50,20 @@ The classification model training pipeline consists of the following algorithms:
 - XGBoost Classifier
 
 The pipelines are implemented using scikit-learn's `make_pipeline` function, and each pipeline includes a standardization step using `StandardScaler()` to preprocess the data before applying the respective algorithm.
+
+Grid:
+- Hyperparameters are tuned using GridSearchCV
+
+### Model Evaluation
+
+- Model performance is evaluated on the test set using AUC, accuracy, confusion matrix, etc.
+- The Gradient Boosting Classifier performed the best.
+
+### Model Persistence
+
+- The best model is serialized using Pickle for deployment
+- A JSON schema is created to standardize web service requests
+
 
 ## Web App Usage
 
